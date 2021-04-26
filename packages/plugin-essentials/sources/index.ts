@@ -1,6 +1,6 @@
 import {Descriptor, Plugin, SettingsType, Package, formatUtils} from '@yarnpkg/core';
 import {Workspace}                                              from '@yarnpkg/core';
-import {isCI}                                                   from 'ci-info';
+// import {isCI}                                                   from 'ci-info';
 
 import add                                                      from './commands/add';
 import bin                                                      from './commands/bin';
@@ -87,7 +87,7 @@ const plugin: Plugin = {
     enableImmutableInstalls: {
       description: `If true (the default on CI), prevents the install command from modifying the lockfile`,
       type: SettingsType.BOOLEAN,
-      default: isCI,
+      default: false,
     },
 
     defaultSemverRangePrefix: {
